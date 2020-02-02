@@ -38,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quantoxProjekat" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -94,8 +94,7 @@
       <workItem from="1580576600160" duration="11944000" />
       <workItem from="1580597905951" duration="8763000" />
       <workItem from="1580606739302" duration="450000" />
-      <workItem from="1580652332881" duration="8644000" />
-      <workItem from="1580662964126" duration="583000" />
+      <workItem from="1580652332881" duration="16015000" />
     </task>
     <servers />
   </component>

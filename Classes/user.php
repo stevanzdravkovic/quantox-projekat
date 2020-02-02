@@ -42,4 +42,19 @@ class user extends db
             $message = '<label>Wrong data </label>';
         }
     }
+
+    public function checkEmail($email)
+    {
+        $sql = "SELECT email FROM users WHERE email = :email ";
+        $stmt= $this->connect()->prepare($sql);
+        $stmt->execute(
+            array(
+                'email' => $email
+            )
+        );
+        return $count = $stmt->rowCount();
+
+
+    }
+
 }

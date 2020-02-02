@@ -6,6 +6,9 @@ include('./logic/insertNewUser.php');
         <div class="col-lg-12">
             <div class="jumbotron">
                 <h2 class="mb-4">Register now</h2>
+                <?php
+                include('logic/error.php');
+                ?>
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -13,16 +16,16 @@ include('./logic/insertNewUser.php');
                     </div>
                     <div class="form-group">
                         <label for="mail">Mail</label>
-                        <input type="text" class="form-control" name="mail" id="mail" placeholder="Enter E-mail">
+                        <input type="email" class="form-control" name="mail" id="mail" placeholder="Enter E-mail">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <small>(minimum 8 characters and 1 number)</small>
-                        <input type="text" class="form-control" name="pass" id="pass" placeholder="Enter password">
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Enter password">
                     </div>
                     <div class="form-group">
                         <label for="Rpassword">Repeat password</label>
-                        <input type="text" class="form-control" name="Rpass" id="Rpass" placeholder="Enter password again">
+                        <input type="password" class="form-control" name="Rpass" id="Rpass" placeholder="Enter password again">
                     </div>
 
                         <div class="form-group">

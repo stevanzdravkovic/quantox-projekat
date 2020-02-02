@@ -1,2 +1,0 @@
-# quantox-projekat
-project
