@@ -33,7 +33,7 @@ if (isset($_REQUEST['submit']))
         $message = "<label>Invalid password format </label>";
     }
     else{
-        $fields= [
+        $fields = [
             'name_user'=> $name,
             'email'=> $mail,
             'password'=> md5($password),

@@ -24,7 +24,7 @@ class user extends db
     public function login($email, $password)
     {
         $sql = "SELECT * FROM users WHERE email = :email AND password = :password";
-        $stmt= $this->connect()->prepare($sql);
+        $stmt = $this->connect()->prepare($sql);
         $stmt->execute(
             array(
                 'email' => $email,
@@ -42,19 +42,16 @@ class user extends db
             $message = '<label>Wrong data </label>';
         }
     }
-
+    #unique mail
     public function checkEmail($email)
     {
         $sql = "SELECT email FROM users WHERE email = :email ";
-        $stmt= $this->connect()->prepare($sql);
+        $stmt = $this->connect()->prepare($sql);
         $stmt->execute(
             array(
                 'email' => $email
             )
         );
         return $count = $stmt->rowCount();
-
-
     }
-
 }

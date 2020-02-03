@@ -12,9 +12,8 @@ include('./logic/loginUser.php');
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="mail">Mail</label>
-                        <input type="text" class="form-control" name="mail" id="mail" placeholder="Enter E-mail">
+                        <input type="email" class="form-control" name="mail" id="mail" placeholder="Enter E-mail">
                     </div>
-
                     <div class="form-group">
                         <label for="pass">Password</label>
                         <input type="password" class="form-control" name="pass" id="pass" placeholder="Enter password">
