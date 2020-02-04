@@ -24,5 +24,4 @@ if (isset($_REQUEST['submit']))
             $message = "<label>Wrong data</label>";
         }
     }
-
 }

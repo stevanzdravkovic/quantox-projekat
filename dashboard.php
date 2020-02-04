@@ -1,5 +1,9 @@
 <?php
 session_start();
+function __autoload($class)
+{
+    require_once "Classes/$class.php";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,8 +13,25 @@ session_start();
     <title>quantox</title>
 </head>
 <body>
-<?php
-include('logic/login-success.php');
-?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h3>Welcome, your email is: <?php echo $_SESSION['mail']?></h3><div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            </li>
+        </ul>
+        <?php include('components/searchForm.php') ?>
+        <a class="nav-link" href="logout.php"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button> <span class="sr-only">(current)</span></a>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <?php include('logic/login-success.php') ?>
+        </div>
+        <div class="col">
+            <?php include ('logic/search.php')?>
+        </div>
+    </div>
+<div>
 </body>
 </html>
