@@ -1,8 +1,5 @@
 <?php
-function __autoload($class)
-{
-    require_once "Classes/$class.php";
-}
+
 if (isset($_REQUEST['submit']))
 {
     $name = $_REQUEST['name'];

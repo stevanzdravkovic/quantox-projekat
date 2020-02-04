@@ -8,6 +8,7 @@
 <body>
 <?php
 include 'components/navbar.php';
+
 include 'components/content.php';
 ?>
 </body>
