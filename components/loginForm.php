@@ -7,7 +7,7 @@ include('./logic/loginUser.php');
             <div class="jumbotron">
                 <h2 class="mb-4">Please login</h2>
                 <?php
-                    include('logic/error.php');
+                include('logic/error.php');
                 ?>
                 <form action="" method="post">
                     <div class="form-group">

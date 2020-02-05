@@ -12,7 +12,7 @@ include('./logic/insertNewUser.php');
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name"  placeholder="Enter name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
                     </div>
                     <div class="form-group">
                         <label for="mail">Mail</label>
@@ -25,93 +25,40 @@ include('./logic/insertNewUser.php');
                     </div>
                     <div class="form-group">
                         <label for="Rpassword">Repeat password</label>
-                        <input type="password" class="form-control" name="Rpass" id="Rpass" placeholder="Enter password again">
+                        <input type="password" class="form-control" name="Rpass" id="Rpass"
+                               placeholder="Enter password again">
                     </div>
 
-                        <div class="form-group">
-                            <label for="category">Category</label>
+                    <div class="form-group">
+                        <label for="category">Category</label>
 
-                            <select class="form-control1 form-control" id="category1">
+                        <select class="form-control1 form-control" id="category1">
 
-                            </select>
-                        </div>
+                        </select>
+                    </div>
 
-                        <div class="form-group" style="visibility: hidden">
-                            <label for="category">Category</label>
-                            <select class="form-control2 form-control" id="category2" name="category">
+                    <div class="form-group" style="visibility: hidden">
+                        <label for="category">Category</label>
+                        <select class="form-control2 form-control" id="category2" name="category">
 
-                            </select>
-                        </div>
+                        </select>
+                    </div>
 
-                        <div class="form-group" style="visibility: hidden">
-                            <label for="category">Category</label>
-                            <select class="form-control3 form-control" id="category" name="category">
-                            </select>
-                        </div>
+                    <div class="form-group" style="visibility: hidden">
+                        <label for="category">Category</label>
+                        <select class="form-control3 form-control" id="category" name="category">
+                        </select>
+                    </div>
 
-                        <div class="form-group" style="visibility: hidden">
-                            <label for="category">Category</label>
-                            <select class="form-control4 form-control" id="category3" name="category">
-                            </select>
-                        </div>
+                    <div class="form-group" style="visibility: hidden">
+                        <label for="category">Category</label>
+                        <select class="form-control4 form-control" id="category3" name="category">
+                        </select>
+                    </div>
                     <input type="submit" name="submit" class="btn btn-primary">
                 </form>
-
             </div>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-
-        let id=1;
-        jQuery.ajax({
-            type: 'post',
-            url: 'getCategoryAjax.php',
-            data: 'id='+id,
-            success: function (result) {
-
-                jQuery('.form-control1').html(result);
-            }
-        });
-
-        $(".form-control1").change(function () {
-            $(".form-control2").css("visibility", "visible");
-            var id = jQuery(this).val();
-            jQuery.ajax({
-                type: 'post',
-                url: 'getCategoryAjax.php',
-                data: 'id='+id,
-                success: function (result) {
-                    jQuery('.form-control2').html(result);
-                }
-            })
-        });
-
-        $(".form-control2").change(function () {
-            $(".form-control3").css("visibility", "visible");
-            var id = jQuery(this).val();
-            jQuery.ajax({
-                type: 'post',
-                url: 'getCategoryAjax.php',
-                data: 'id='+id,
-                success: function (result) {
-                    jQuery('.form-control3').html(result);
-                }
-            })
-        });
-
-        $(".form-control3").change(function () {
-            $(".form-control4").css("visibility", "visible");
-            var id = jQuery(this).val();
-            jQuery.ajax({
-                type: 'post',
-                url: 'getCategoryAjax.php',
-                data: 'id='+id,
-                success: function (result) {
-                    jQuery('.form-control4').html(result);
-                }
-            })
-        });
-    });
-</script>
+<script src="public/js/ajax.js"></script>

@@ -38,19 +38,20 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quantoxProjekat" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\quantox_test" />
-      <recent name="C:\xampp\htdocs\quantox_test\logic" />
-      <recent name="C:\xampp\htdocs\quantox_test\pages" />
-      <recent name="C:\xampp\htdocs\crud-oop\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\quantox_test\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\quantox_test" />
+      <recent name="C:\xampp\htdocs\quantox_test\pages" />
+      <recent name="C:\xampp\htdocs\quantox_test\public\js" />
+      <recent name="C:\xampp\htdocs\quantox_test\logic" />
+      <recent name="C:\xampp\htdocs\crud-oop\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -98,7 +99,9 @@
       <workItem from="1580687613865" duration="5774000" />
       <workItem from="1580729707555" duration="3273000" />
       <workItem from="1580770406002" duration="11426000" />
-      <workItem from="1580814737072" duration="3342000" />
+      <workItem from="1580814737072" duration="3583000" />
+      <workItem from="1580834962469" duration="12761000" />
+      <workItem from="1580854706529" duration="9135000" />
     </task>
     <servers />
   </component>

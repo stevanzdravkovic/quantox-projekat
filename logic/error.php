@@ -1,6 +1,5 @@
 <?php
-if(isset($message))
-{
+if (isset($message)) {
     echo "<label class='text-danger'>$message</label>";
 }
 ?>
