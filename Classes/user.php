@@ -3,7 +3,9 @@
 
 class User extends Database
 {
-    #add new user
+    /*
+     * Add new user
+     */
     public function insert($fields)
     {
         $implodeColumns = implode(',', array_keys($fields));
@@ -19,7 +21,9 @@ class User extends Database
         }
     }
 
-    #login
+    /*
+     * Login
+     */
     public function login($email, $password)
     {
         $sql = "SELECT * FROM users WHERE email = :email AND password = :password";
@@ -31,7 +35,9 @@ class User extends Database
         return $count;
     }
 
-    #unique mail
+    /*
+     * Unique e-mail
+     */
     public function checkEmail($email)
     {
         $sql = "SELECT email FROM users WHERE email = :email ";
@@ -41,10 +47,15 @@ class User extends Database
         return $count = $stmt->rowCount();
     }
 
-    #search
+    /*
+     * Search
+     */
     public function search($name_user, $category)
     {
-        $sql = "SELECT * FROM users INNER JOIN categories ON users.category_id = categories.id_category WHERE users.name_user=:name_user AND (categories.id_category=:id_category OR categories.parent=:id_category)";
+        $sql = "SELECT * FROM users INNER JOIN categories ON users.category_id = categories.id_category 
+                WHERE users.name_user=:name_user AND (categories.id_category=:id_category OR categories.parent=:id_category 
+                OR categories.id_category IN ((SELECT c2.id_category FROM categories c INNER JOIN categories c2 ON c.id_category=c2.parent 
+                WHERE c.parent=:id_category)))";
         $stmt = $this->connect()->prepare($sql);
         $stmt->bindValue(":name_user", $name_user);
         $stmt->bindValue(":id_category", $category);
